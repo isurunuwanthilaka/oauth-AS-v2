@@ -10,16 +10,15 @@ import java.util.List;
 
 public class AuthUserDetail implements UserDetails {
 
-    public User getUser() {
-        return user;
-    }
-
     private final User user;
 
     public AuthUserDetail(User user) {
         this.user = user;
     }
 
+    public User getUser() {
+        return user;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

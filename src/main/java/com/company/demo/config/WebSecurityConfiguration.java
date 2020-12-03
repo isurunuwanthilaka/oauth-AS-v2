@@ -42,7 +42,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/h2-console","/login").permitAll()
+                .antMatchers("/h2-console", "/login").permitAll()
                 .antMatchers("/oauth/authorize")
                 .authenticated()
                 .and().formLogin()
